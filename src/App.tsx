@@ -63,13 +63,13 @@ const ServiceCard = ({ title, subtitle, price, features, isFeatured = false }: a
         </li>
       ))}
     </ul>
-    <button className={`w-full py-5 rounded-2xl font-bold text-lg transition-all duration-300 ${
+    <a href="#contact" className={`w-full py-5 rounded-2xl font-bold text-lg transition-all duration-300 flex items-center justify-center ${
       isFeatured 
         ? 'bg-emerald-700 text-white hover:bg-emerald-800 shadow-lg shadow-emerald-700/20' 
         : 'bg-slate-50 text-emerald-900 border border-slate-200 hover:bg-emerald-50 hover:border-emerald-200'
     }`}>
       Đăng ký ngay
-    </button>
+    </a>
   </motion.div>
 );
 
@@ -473,7 +473,7 @@ export default function App() {
                 </div>
                 <div className="flex items-center justify-between flex-wrap gap-8">
                   <div className="text-6xl font-bold text-emerald-900 font-serif">5.000.000đ<span className="text-lg text-slate-400 font-normal font-sans"> /tháng</span></div>
-                  <button className="bg-emerald-800 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-emerald-900 transition-all shadow-xl shadow-emerald-900/20 hover:scale-[1.02]">Liên hệ Chuyên gia</button>
+                  <a href="#contact" className="bg-emerald-800 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-emerald-900 transition-all shadow-xl shadow-emerald-900/20 hover:scale-[1.02] flex items-center justify-center">Liên hệ Chuyên gia</a>
                 </div>
               </div>
             </motion.div>
@@ -482,8 +482,8 @@ export default function App() {
       </section>
 
       {/* Knowledge Section */}
-      <section className="py-32 bg-slate-950 text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-emerald-900/20 -skew-x-12 translate-x-1/4"></div>
+      <section className="py-32 bg-white text-slate-900 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-emerald-50 -skew-x-12 translate-x-1/4"></div>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <motion.div
@@ -491,45 +491,45 @@ export default function App() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-emerald-400 font-bold tracking-[0.3em] uppercase text-sm mb-6 block">Chương trình đặc biệt</span>
-              <h2 className="text-6xl lg:text-7xl font-bold mb-10 italic font-serif tracking-tight">Khóa học <br/><span className="text-emerald-400">"24h Tỉnh Thức"</span></h2>
-              <p className="text-2xl text-slate-400 mb-12 leading-relaxed">Xây dựng nền tảng tư duy đúng đắn về sức khỏe với 24 chủ đề chuyên sâu từ dinh dưỡng, quản lý giấc ngủ đến cảm xúc.</p>
+              <span className="text-emerald-700 font-bold tracking-[0.3em] uppercase text-sm mb-6 block">Chương trình đặc biệt</span>
+              <h2 className="text-6xl lg:text-7xl font-bold mb-10 italic font-serif tracking-tight">Khóa học <br/><span className="text-emerald-600">"24h Tỉnh Thức"</span></h2>
+              <p className="text-2xl text-slate-600 mb-12 leading-relaxed">Xây dựng nền tảng tư duy đúng đắn về sức khỏe với 24 chủ đề chuyên sâu từ dinh dưỡng, quản lý giấc ngủ đến cảm xúc.</p>
               <div className="space-y-8 mb-16">
                 <div className="flex items-start gap-6">
-                  <div className="w-14 h-14 rounded-2xl bg-emerald-500/20 flex items-center justify-center flex-shrink-0 text-emerald-400 border border-emerald-500/30">
+                  <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center flex-shrink-0 text-emerald-700 border border-emerald-200">
                     <BookOpen className="w-7 h-7" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-2xl mb-2 font-serif">Tư duy gốc rễ</h4>
-                    <p className="text-slate-400 text-lg">Giúp bạn trở thành người chăm sóc sức khỏe tốt nhất cho chính mình.</p>
+                    <h4 className="font-bold text-2xl mb-2 font-serif text-slate-900">Tư duy gốc rễ</h4>
+                    <p className="text-slate-500 text-lg">Giúp bạn trở thành người chăm sóc sức khỏe tốt nhất cho chính mình.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-6">
-                  <div className="w-14 h-14 rounded-2xl bg-emerald-500/20 flex items-center justify-center flex-shrink-0 text-emerald-400 border border-emerald-500/30">
+                  <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center flex-shrink-0 text-emerald-700 border border-emerald-200">
                     <Zap className="w-7 h-7" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-2xl mb-2 font-serif">Áp dụng khoa học sức khỏe</h4>
-                    <p className="text-slate-400 text-lg">Dinh dưỡng đúng cách, quản lý giấc ngủ và làm chủ cảm xúc.</p>
+                    <h4 className="font-bold text-2xl mb-2 font-serif text-slate-900">Áp dụng khoa học sức khỏe</h4>
+                    <p className="text-slate-500 text-lg">Dinh dưỡng đúng cách, quản lý giấc ngủ và làm chủ cảm xúc.</p>
                   </div>
                 </div>
               </div>
               <div className="flex items-center gap-10">
-                <div className="text-5xl font-bold font-serif">2.400.000đ<span className="text-lg text-slate-500 font-normal font-sans"> /khóa</span></div>
-                <button className="bg-white text-slate-900 px-12 py-5 rounded-2xl font-bold text-xl hover:bg-emerald-50 transition-all hover:scale-[1.02]">Đăng ký ngay</button>
+                <div className="text-5xl font-bold font-serif text-emerald-900">2.400.000đ<span className="text-lg text-slate-400 font-normal font-sans"> /khóa</span></div>
+                <a href="#contact" className="bg-emerald-800 text-white px-12 py-5 rounded-2xl font-bold text-xl hover:bg-emerald-900 transition-all hover:scale-[1.02] shadow-xl shadow-emerald-900/20 flex items-center justify-center">Đăng ký ngay</a>
               </div>
             </motion.div>
             
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-emerald-800 to-slate-900 rounded-[4rem] p-16 flex items-center justify-center border border-emerald-700/50 overflow-hidden group shadow-2xl">
+              <div className="aspect-square bg-gradient-to-br from-emerald-700 to-emerald-900 rounded-[4rem] p-16 flex items-center justify-center border border-emerald-600/50 overflow-hidden group shadow-2xl">
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
                 <div className="text-center relative z-10">
-                  <div className="text-[10rem] font-bold text-emerald-400 mb-2 leading-none group-hover:scale-110 transition duration-700 font-serif">24</div>
+                  <div className="text-[10rem] font-bold text-emerald-300 mb-2 leading-none group-hover:scale-110 transition duration-700 font-serif">24</div>
                   <div className="text-4xl font-bold tracking-[0.2em] uppercase text-white mb-8">Chủ đề chuyên sâu</div>
-                  <div className="px-8 py-3 bg-emerald-500 text-emerald-950 font-bold rounded-full text-lg inline-block uppercase tracking-widest shadow-xl shadow-emerald-500/20">Health Coach Program</div>
+                  <div className="px-8 py-3 bg-white text-emerald-900 font-bold rounded-full text-lg inline-block uppercase tracking-widest shadow-xl shadow-black/10">Health Coach Program</div>
                 </div>
               </div>
-              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-emerald-500/20 rounded-full blur-3xl"></div>
+              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-emerald-500/10 rounded-full blur-3xl"></div>
             </div>
           </div>
         </div>
